@@ -1,0 +1,31 @@
+---
+import CardFeat from "./CardFeat.astro";
+---
+
+<section class="bg-black font-sans min-h-[calc(100vh-1px)]">
+    <div class="container mx-auto px-4 text-center">
+
+        <h1 class="text-3xl tracking-tight font-bold text-balance text-[#f8f8ff] sm:text-4xl "><span class="text-transparent bg-clip-text bg-gradient-to-r from-neutral-600 to-[#f8f8ff]">¿POR QUÉ</span> UNA <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#f8f8ff] to-neutral-600">LANDING PAGE?</span></h1>
+
+        <div class="mt-10 grid gap-4 lg:grid-cols-2 lg:grid-rows-2 text-start">
+            <div class="relative lg:row-span-2">
+                <CardFeat
+                    title="El Cierre Definitivo de Fugas de Dinero."
+                    description="Su sitio web pierde el 98% de las oportunidades. Una Landing Page elimina distracciones, obligando al visitante a elegir: Comprar o irse. Esto multiplica su tasa de conversión por más de 7 veces."
+                    icon="https://assets.entrepreneur.com/content/3x2/2000/1701107803-latin-america-business-expansion-1123-g1171615860.jpg"
+                    size="large"
+                />
+            </div>
+            <CardFeat
+                title="Mensaje Vendedor en 5 Segundos"
+                description="Su cliente no tiene tiempo. Nosotros garantizamos que su propuesta de valor sea entendida de inmediato. Cero dudas, cero scroll innecesario. Si no es claro al instante, la venta no existe."
+                icon="https://www.valenzhealth.com/wp-content/uploads/2020/10/Professional-800x800-L.png"
+            />
+            <CardFeat
+                title="Su Único Activo de Crecimiento Medible."
+                description="	Esto no es diseño, es retorno de inversión. Podemos medir, probar y optimizar cada palabra para que su Landing Page venda más cada semana. Es la única forma de garantizar que su inversión publicitaria no se queme."
+                icon="https://www.greanpipe.com/wp-content/uploads/2019/11/dealer-768x707.png"
+            />
+        </div>
+    </div>
+</section>

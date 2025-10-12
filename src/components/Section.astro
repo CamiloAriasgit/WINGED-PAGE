@@ -1,20 +1,33 @@
 ---
-import Button from '../components/Button.astro';
+import Button from "../components/Button.astro";
 ---
 
-<section 
-    class="bg-cover bg-center bg-no-repeat flex items-center justify-center 
-           min-h-[calc(100vh-1px)] px-6 
-           bg-neutral-950" 
->      <div class="container mx-auto max-w-6xl text-center">
-        <h1 class="text-5xl tracking-tight font-bold text-balance text-[#f8f8ff] sm:text-7xl">
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-neutral-500 to-[#f8f8ff]">SÉ QUE</span> NECESITAS <span class='text-transparent bg-clip-text bg-gradient-to-r from-[#f8f8ff] to-neutral-500'>VENDER</span>
-        </h1> <br />
-        <p class="md:text-xl text-neutral-500 mb-8 max-w-4xl mx-auto">
-          Y aquí estoy para ayudarte a hacerlo con una <span class="px-1 text-transparent bg-clip-text bg-gradient-to-r from-neutral-500 to-lime-600">Landing Page</span>
-        </p>
-        <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-          <Button texto="¡EMPEZEMOS!" />
-        </div>
-      </div>
+<section
+  class="bg-cover bg-center bg-no-repeat flex items-center justify-center
+           min-h-[calc(100vh-1px)] px-6
+           bg-black"
+>
+  <div class="container mx-auto max-w-6xl text-center">
+    <h1
+      class="text-5xl tracking-tight font-bold text-balance text-[#f8f8ff] sm:text-7xl"
+    >
+      <span
+        class="text-transparent bg-clip-text bg-gradient-to-r from-neutral-600 to-[#f8f8ff]"
+        >SÉ QUE</span
+      > NECESITAS <span
+        class="text-transparent bg-clip-text bg-gradient-to-r from-[#f8f8ff] to-neutral-600"
+        >VENDER</span
+      >
+    </h1>
+    <br />
+    <p class="md:text-xl text-neutral-500 mb-8 max-w-4xl mx-auto">Con una<span
+        class="px-1 text-transparent bg-clip-text bg-gradient-to-r from-neutral-500 to-[#f8f8ff]"
+        >Landing Page</span
+      >
+    </p>
+
+    <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+      <Button texto="¡EMPEZEMOS!" />
+    </div>
+  </div>
 </section>

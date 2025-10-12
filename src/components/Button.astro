@@ -1,0 +1,18 @@
+---
+interface Props {
+  texto: string;
+}
+
+const { texto } = Astro.props;
+const NUMERO_DE_TELEFONO = "573003607632";
+const MENSAJE_PREDETERMINADO = "Hola, quiero empezar un nuevo proyecto.";
+const mensajeCodificado = encodeURIComponent(MENSAJE_PREDETERMINADO);
+const whatsappUrl = `https://wa.me/${NUMERO_DE_TELEFONO}?text=${mensajeCodificado}`;
+const estiloBoton = "bg-lime-500 text-black font-bold text-xl px-2 py-1 shadow hover:bg-neutral-900 hover:text-neutral-500 transition-colors duration-300";
+const estiloBotonBlack = "bg-[#f8f8ff] border-1 border-[#f8f8ff] text-black font-semibold text-base px-6 py-2 rounded shadow hover:bg-neutral-900 hover:border-neutral-900 hover:text-[#f8f8ff] transition-colors duration-300";
+
+---
+
+<a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class={estiloBoton}>
+  {texto}
+</a>

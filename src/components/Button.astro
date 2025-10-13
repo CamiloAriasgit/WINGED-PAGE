@@ -10,12 +10,13 @@ const mensajeCodificado = encodeURIComponent(MENSAJE_PREDETERMINADO);
 const whatsappUrl = `https://wa.me/${NUMERO_DE_TELEFONO}?text=${mensajeCodificado}`;
 const estiloBoton = "bg-[#25d366] text-neutral-950 font-bold text-xl px-2 py-1 shadow hover:bg-neutral-900 hover:text-neutral-500 transition-colors duration-300";
 const estiloBotonBlack = "bg-[#f8f8ff] border-1 border-[#f8f8ff] text-black font-semibold text-base px-6 py-2 rounded shadow hover:bg-neutral-900 hover:border-neutral-900 hover:text-[#f8f8ff] transition-colors duration-300";
-const estiloBotonPersuasivo = "bg-[#25d366] text-neutral-950 font-extrabold text-xl px-8 py-3 rounded-lg shadow-2xl shadow-green-700/50 hover:bg-[#34e777] hover:scale-[1.03] transition-all duration-300 uppercase tracking-wider";
 const whatsapp = "bg-[#003E91]/20 border-1 border-[#003E91]/40 rounded  shadow-2xl shadow-[#003E91]/70 text-[#003E91] font-bold text-xl px-2 py-1 hover:shadow-2xl hover:shadow-[#003E91]/90 hover:bg-[#003E91] hover:text-black transition-colors duration-300";
+const whatsappD = "bg-[#f8f8ff] border-1 border-[#f8f8ff]/40 rounded  shadow-2xl shadow-[#f8f8ff]/40 text-black font-bold text-xl px-2 py-1 hover:shadow-2xl hover:shadow-[#f8f8ff]/50 hover:bg-[#f8f8ff]/5 hover:text-[#f8f8ff] transition-colors duration-300";
+const whatsappP = "bg-[#36454f]/20 border-1 border-[#36454f]/40 rounded  shadow-2xl shadow-[#36454f]/40 text-[#36454f] font-bold text-xl px-2 py-1 hover:shadow-2xl hover:shadow-[#36454f]/50 hover:bg-[#36454f] hover:text-black transition-colors duration-300";
 
 
 ---
 
-<a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class={whatsapp}>
+<a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class={whatsappD}>
   {texto}
 </a>

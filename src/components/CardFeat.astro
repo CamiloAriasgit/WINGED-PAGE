@@ -11,12 +11,12 @@ const { size } = Astro.props;
 const cardClasses = `
     relative rounded overflow-hidden p-4 shadow-lg border border-neutral-900
     ${size === "large" ? "lg:col-span-2 lg:row-span-2" : ""}
-    bg-neutral-960 text-white hover:bg-neutral-900 hover:border-neutral-900transition-colors duration-300`;
+    bg-neutral-960 text-white shadow-2xl shadow-black hover:bg-neutral-900 hover:border-neutral-900transition-colors duration-300`;
 ---
 
 <div class={cardClasses}>
     <div class="p8">
-        <h3 class={`text-xl font-normal text-transparent bg-clip-text bg-gradient-to-r from-neutral-500 to-[#f8f8ff] transition-colors duration-300`}>{title}</h3>
+        <h3 class={`text-xl font-normal text-transparent bg-clip-text bg-gradient-to-r from-neutral-400 to-[#f8f8ff] transition-colors duration-300`}>{title}</h3>
 
         <p class="mt-2 text-neutral-500 text-sm">{description}</p>
     </div>

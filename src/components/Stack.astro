@@ -1,0 +1,23 @@
+---
+interface props {
+    title: string;
+    description: string;
+    size?: "small" | "large";
+}
+
+const { title } = Astro.props;
+const { description } = Astro.props;
+const { size } = Astro.props;
+const stackClasses = `
+    relative rounded overflow-hidden p-4 shadow-lg border border-lime-950
+    ${size === "large" ? "lg:col-span-2 lg:row-span-2" : ""}
+    bg-neutral-950 text-white shadow-2xl shadow-black hover:border-lime-500 transition-colors duration-300`;
+---
+
+<div class={stackClasses}>
+    <div class="p8">
+        <h3 class={`text-xl font-normal text-[#0000ff]`}>{title}</h3>
+
+        <p class="mt-2 text-neutral-500 text-sm">{description}</p>
+    </div>
+</div>

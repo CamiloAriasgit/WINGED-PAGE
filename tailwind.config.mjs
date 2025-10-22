@@ -1,5 +1,7 @@
 // tailwind.config.mjs
 /** @type {import('tailwindcss').Config} */
+import defaultTheme from 'tailwindcss/defaultTheme'; // 1. Importa la configuración base
+
 export default {
   // 1. Dónde buscar clases de Tailwind
   content: [
@@ -8,30 +10,37 @@ export default {
   
   theme: {
     extend: {
-      // 2. Definición de colores personalizados
+      // 2. Definición de la Fuente
+      fontFamily: {
+        // Usa 'Inter' como la primera opción en la familia de fuentes 'sans'
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+      },
+      
+      // 3. Definición de colores
       colors: {
-        // Tu color primario
-        'primary-color': '#06b6d4', 
+        // Su color de acento principal (Azul Profundo #003E91)
+        'accent-blue': '#003E91',
         
-        // Tu color secundario (el morado)
-        'secondary-color': '#7c3aed',
+        // Color de acento secundario (Opcional, si mantiene el morado para efectos)
+        'accent-violet': '#7c3aed',
         
-        // Un color de texto claro que usas
+        // Su color de texto claro (Ghost White)
         'light-text': '#f8f8ff', 
         
-        // Si usas el verde lima de tu primer ejemplo:
-        'lime-dark': '#1a2e05', // bg-lime-950
-        'lime-base': '#a7f3d0', // text-lime-300 (Aproximado)
+        // Verde WhatsApp (Directo, para el CTA flotante)
+        'whatsapp-green': '#25D366', 
+        
+        // Dejé los otros colores por si acaso, pero recomiendo usar solo 'accent-blue'
       },
     },
   },
   
-  // 3. Puedes dejar el safelist por si acaso, pero ya no será necesario
-  //    para los colores definidos arriba.
-  // safelist: [
-  //   'to-[#7c3aed]', 
-  //   'to-[#06b6d4]', 
-  // ],
+  // 4. (Opcional) Safelist
+  // Es útil mantenerlo si usa el azul profundo en gradientes complejos
+  safelist: [
+    'to-[#003E91]', 
+    'from-[#003E91]',
+  ],
   
   plugins: [],
 }

@@ -1,6 +1,15 @@
 ---
 import Button from "../components/Button.astro";
 import CarruselCircularTailwind from "./CarruselCircularTailwind";
+
+// 1. VARIABLE PARA URLS: Define tu array de URLs aquí
+const imageList = [
+    'https://tint.creativemarket.com/ztQgIzS5Th-os3JXM6kR4eRKsASAQOTx43nKntpH4uQ/width:1200/height:800/gravity:nowe/rt:fill-down/el:1/czM6Ly9maWxlcy5jcmVhdGl2ZW1hcmtldC5jb20vaW1hZ2VzL3NjcmVlbnNob3RzL3Byb2R1Y3RzLzEzMzQvMTMzNDAvMTMzNDAxMjIvY3JlYXRpdmUtbWFya2V0LXByZXZpZXctMTAtby5qcGc?1662306186', // URL 1
+    'https://tse1.mm.bing.net/th/id/OIP.zxeFmZdgWMstVSBf_kOm6QHaEN?w=1351&h=768&rs=1&pid=ImgDetMain&o=7&rm=3', // URL 2
+    'https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/364377874/original/c6487d9c7fb135c75f3423227c7c6f43f7f5db1e/design-an-exceptional-landing-page-for-your-business.png', // URL 3
+    'https://tse1.mm.bing.net/th/id/OIP.P1awi0UgrH0dpjHsCV3fbgHaEz?w=1400&h=909&rs=1&pid=ImgDetMain&o=7&rm=3', // URL 4
+    'https://tse3.mm.bing.net/th/id/OIP.cKrr_vcIPFQ9O1cv5BZ7TAHaDX?w=1351&h=615&rs=1&pid=ImgDetMain&o=7&rm=3', // URL 5 (puedes agregar más)
+];
 ---
 
 <section
@@ -20,7 +29,7 @@ import CarruselCircularTailwind from "./CarruselCircularTailwind";
       <Button texto="Comenzar ahora" />
     </div>
     <div>
-    <CarruselCircularTailwind client:load/>
+    <CarruselCircularTailwind imageUrls={imageList} client:load/>
   </div>
   </div>
 </section>

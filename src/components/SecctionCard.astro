@@ -1,11 +1,21 @@
 ---
 import CardFeat from "./CardFeat.astro";
+import CarruselCircularTailwind from "./CarruselCircularTailwind";
+const imageList = [
+    'public/images/1.jpg', // URL 1
+    'public/images/2.jpg', // URL 1
+    'public/images/3.jpg', // URL 1
+    'https://tse1.mm.bing.net/th/id/OIP.P1awi0UgrH0dpjHsCV3fbgHaEz?w=1400&h=909&rs=1&pid=ImgDetMain&o=7&rm=3', // URL 4
+    'https://tse3.mm.bing.net/th/id/OIP.cKrr_vcIPFQ9O1cv5BZ7TAHaDX?w=1351&h=615&rs=1&pid=ImgDetMain&o=7&rm=3', // URL 5 (puedes agregar más)
+];
 ---
 
-<section class="bg-neutral-950 font-sans min-h-[calc(100vh-1px)]">
+<section class="font-sans min-h-[calc(100vh-1px)]">
     <div class="container mx-auto px-6 text-center">
 
         <h1 class="text-3xl tracking-tight font-light text-balance text-[#f8f8ff] sm:text-4xl ">¿Por qué una landing page?</h1>
+        <CarruselCircularTailwind imageUrls={imageList} client:load/>
+
 
         <div class="mt-10 grid gap-4 lg:grid-cols-2 lg:grid-rows-2 text-start">
             <div class="relative lg:row-span-2">
@@ -26,6 +36,24 @@ import CardFeat from "./CardFeat.astro";
                 description="Esto no es solo diseño, es un laboratorio de ventas. Medimos y ajustamos para que su inversión publicitaria nunca se queme."
                 icon="https://www.greanpipe.com/wp-content/uploads/2019/11/dealer-768x707.png"
             />
+
         </div>
+
     </div>
 </section>
+
+<style>
+  /* Variables CSS para responsividad 3D */
+  :root {
+    --carrusel-radio-z: 150px; /* Móvil: (150) Radio pequeño (solo se ve el frente) */
+    --carrusel-perspective: 900px;
+  }
+
+  /* Aplica los estilos para Escritorio (sm: breakpoint) */
+  @media (min-width: 640px) { 
+    :root {
+      --carrusel-radio-z: 250px; /* Escritorio: Radio grande (se ven los divs vecinos) */
+      --carrusel-perspective: 1200px;
+    }
+  }
+</style>

@@ -73,7 +73,7 @@ const CarruselCircularTailwind: React.FC<CarruselProps> = ({
                                 absolute top-0 left-0 w-full h-full 
                                 flex items-center justify-center 
                                 text-white text-xl font-bold 
-                                rounded-lg shadow-xl shadow-gray-900/50
+                                rounded-lg
                                 transition-opacity duration-300 
                                 bg-cover bg-center bg-no-repeat // <--- CLASES CLAVE PARA LA IMAGEN
                                 ${isFrontElement ? 'opacity-100' : 'opacity-80'}

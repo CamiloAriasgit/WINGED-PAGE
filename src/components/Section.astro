@@ -1,51 +1,23 @@
 ---
 import Button from "../components/Button.astro";
-import CarruselCircularTailwind from "./CarruselCircularTailwind";
 
-// 1. VARIABLE PARA URLS: Define tu array de URLs aquí
-const imageList = [
-    'https://tint.creativemarket.com/ztQgIzS5Th-os3JXM6kR4eRKsASAQOTx43nKntpH4uQ/width:1200/height:800/gravity:nowe/rt:fill-down/el:1/czM6Ly9maWxlcy5jcmVhdGl2ZW1hcmtldC5jb20vaW1hZ2VzL3NjcmVlbnNob3RzL3Byb2R1Y3RzLzEzMzQvMTMzNDAvMTMzNDAxMjIvY3JlYXRpdmUtbWFya2V0LXByZXZpZXctMTAtby5qcGc?1662306186', // URL 1
-    'https://tse1.mm.bing.net/th/id/OIP.zxeFmZdgWMstVSBf_kOm6QHaEN?w=1351&h=768&rs=1&pid=ImgDetMain&o=7&rm=3', // URL 2
-    'https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/364377874/original/c6487d9c7fb135c75f3423227c7c6f43f7f5db1e/design-an-exceptional-landing-page-for-your-business.png', // URL 3
-    'https://tse1.mm.bing.net/th/id/OIP.P1awi0UgrH0dpjHsCV3fbgHaEz?w=1400&h=909&rs=1&pid=ImgDetMain&o=7&rm=3', // URL 4
-    'https://tse3.mm.bing.net/th/id/OIP.cKrr_vcIPFQ9O1cv5BZ7TAHaDX?w=1351&h=615&rs=1&pid=ImgDetMain&o=7&rm=3', // URL 5 (puedes agregar más)
-];
 ---
 
 <section
-  class="flex items-center min-h-[calc(100vh-1px)] px-6 bg-"
+  class="flex items-center min-h-[calc(100vh-1px)] px-6"
 >
   <div class="container mx-auto text-center">
     <h1
-      class="text-3xl tracking-tight font-light text-balance text-[#f8f8ff] sm:text-5xl"
+      class="text-3xl tracking-tight text-balance text-[#f8f8ff] sm:text-5xl"
     >
-      Sé que necesitas vender con una <span class="text-[#f8f8ff]"
-        >landing page</span></h1><br />
-    <p class="text-neutral-500 sm:text-xl">
-      Convierte clicks en clientes y visitas en ventas aumentando tráfico
-      filtrado a tu chat de <span class="text-[#25d366]">WhatsApp</span>
-    </p><br />
+      Tu próxima venta <span class="text-[#f8f8ff]"
+        >comienza aquí</span></h1><br />
+    <p class="text-[#f8f8ff]/90 font-light sm:text-xl">
+      Convierte clicks en <span class="text-violet-500">clientes</span>
+    </p><br/>
     <div class="">
-      <Button texto="Comenzar ahora" />
+      <Button texto="Comenzar" />
     </div>
     <div>
-    <CarruselCircularTailwind imageUrls={imageList} client:load/>
-  </div>
   </div>
 </section>
-
-<style>
-  /* Variables CSS para responsividad 3D */
-  :root {
-    --carrusel-radio-z: 150px; /* Móvil: Radio pequeño (solo se ve el frente) */
-    --carrusel-perspective: 800px;
-  }
-
-  /* Aplica los estilos para Escritorio (sm: breakpoint) */
-  @media (min-width: 640px) { 
-    :root {
-      --carrusel-radio-z: 250px; /* Escritorio: Radio grande (se ven los divs vecinos) */
-      --carrusel-perspective: 1200px;
-    }
-  }
-</style>

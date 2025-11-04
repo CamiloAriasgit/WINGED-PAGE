@@ -8,14 +8,30 @@ const NUMERO_DE_TELEFONO = "573003607632";
 const MENSAJE_PREDETERMINADO = "¡Hey, quiero convertir visitantes en *clientes* con una landing page!";
 const mensajeCodificado = encodeURIComponent(MENSAJE_PREDETERMINADO);
 const whatsappUrl = `https://wa.me/${NUMERO_DE_TELEFONO}?text=${mensajeCodificado}`;
-const estiloBoton = "bg-[#25d366] text-neutral-950 font-bold text-xl px-2 py-1 shadow hover:bg-neutral-900 hover:text-neutral-500 transition-colors duration-300";
-const botonBlack = "bg-[#f8f8ff] border-1 border-[#f8f8ff] text-black font-bold text-base px-6 py-2 rounded shadow hover:bg-neutral-900 hover:border-neutral-900 hover:text-[#f8f8ff] transition-colors duration-300";
-const whatsappB = "bg-[#f8f8ff] border-1 border-[#f8f8ff]/40 rounded  shadow-2xl shadow-[#f8f8ff]/40 text-black font-bold text-xl px-2 py-1 hover:shadow-2xl hover:shadow-[#f8f8ff]/50 hover:bg-[#f8f8ff]/5 hover:text-[#f8f8ff] transition-colors duration-300";
-const whatsapp = "bg-[#f8f8ff] rounded text-neutral-950 font-semibold text-xl px-2 py-1 hover:bg-neutral-900 hover:text-neutral-400 transition-colors duration-300";
 
+// Clase para el contenedor exterior (el "borde" degradado)
+const whatsappBorder = `
+  relative inline-block rounded-4xl p-[1px] /* p-[2px] define el grosor del borde */
+  bg-gradient-to-r from-indigo-500 to-violet-500 /* El gradiente que será el borde */
+  group /* Para manejar el hover del inner div */
+  shadow-2xl shadow-violet-700 /* Sombra para resaltar el botón */
+  hover:shadow-violet-800 transition-all duration-500/* Sombra más intensa al hacer hover */
+`;
 
+// Clases para el contenido interior del botón
+const whatsappInner = `
+  relative z-10 /* Asegura que esté por encima del gradiente */
+  rounded-4xl /* El mismo radio que el exterior */
+  px-4 py-2 font-normal text-white /* Estilo del texto */
+  bg-gradient-to-r from-black via-black to-violet-500 /* Fondo de vidrio del botón */
+  transition-all duration-300
+  hover:bg-gradient-to- from-black via-black to-violet-500/* Efecto hover */
+  flex items-center justify-center gap-2 /* Para alinear íconos si añades uno */
+`;
 ---
 
-<a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class={whatsapp}>
-  {texto}
+<a href={whatsappUrl} target="_blank" rel="noopener noreferrer" class={whatsappBorder}>
+    <div class={whatsappInner}>
+        {texto}
+    </div>
 </a>

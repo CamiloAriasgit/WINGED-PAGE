@@ -20,13 +20,19 @@ import Header from '../components/Header.astro';
         
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link 
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" 
+        
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
             rel="stylesheet"
         >
-        </head>
-    <body class="bg-neutral-950">
+    </head>
+    <body class="bg-black">
         <Header />
         <slot />
     </body>
+    <style>
+        body{
+            //font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
 </html>

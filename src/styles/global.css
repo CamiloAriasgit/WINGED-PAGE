@@ -1,13 +1,8 @@
 /* src/styles/global.css */
-
-/* 1. Importa todas las utilidades de Tailwind */
 @import "tailwindcss";
 
-/* 2. Añade las fuentes de manera global */
-/* @layer base aplica estilos a elementos HTML base (como body) */
 @layer base {
   body {
-    /* Tailwind reemplazará 'fontFamily.sans' con 'Inter', sans-serif, etc. */
     font-family: theme('fontFamily.sans'); 
   }
 }

@@ -9,19 +9,14 @@ const { title } = Astro.props;
 const { description } = Astro.props;
 const { size } = Astro.props;
 const cardClasses = `
-    relative rounded overflow-hidden p-4 shadow-lg border border-neutral-900
+    relative rounded-4xl overflow-hidden p-[1px] 
     ${size === "large" ? "lg:col-span-2 lg:row-span-2" : ""}
-    bg-neutral-950 text-white shadow-2xl shadow-black hover:bg-neutral-900 hover:border-neutral-900transition-colors duration-300`;
-const cardClassess = `
-    relative rounded overflow-hidden p-4 shadow-lg border border-violet-900
-    ${size === "large" ? "lg:col-span-2 lg:row-span-2" : ""}
-    bg-neutral-950 text-white shadow-2xl shadow-black hover:border-violet-500 hover:border-neutral-900transition-colors duration-300`;
+    bg-gradient-to-b from-violet-800 via-indigo-800 to-black hover:bg-gradient-to-t 
+    text-white transition-colors duration-300`;
 ---
 
 <div class={cardClasses}>
-    <div class="p8">
-        <h3 class={`text-xl font-normal text-transparent bg-clip-text bg-gradient-to-r from-neutral-400 to-[#f8f8ff] transition-colors duration-300`}>{title}</h3>
-
-        <p class="mt-2 text-neutral-500 text-sm">{description}</p>
+    <div class="p-8 relative z-10 bg-black rounded-4xl h-full"> 
+        <h3 class={`text-xl font-normal text-indigo-500`}>{title}</h3> <p class="mt-2 text-neutral-300 text-sm">{description}</p>
     </div>
 </div>

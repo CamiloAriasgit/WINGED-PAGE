@@ -2,20 +2,45 @@
 const mokClasses = `
     relative rounded-4xl p-[1px] 
     bg-gradient-to-b from-violet-800/40 via-indigo-800/40 to-black 
-    text-white transition-colors duration-300
-    // Tamaño y comportamiento clave para el "icono":
-    w-full max-w-sm mx-auto shadow-2xl // Limitamos el ancho máximo a 'sm' para que parezca más un icono
+    transition-colors duration-300
+    w-full max-w-sm mx-auto shadow-2xl 
     aspect-video`;
 
 const innerClasses = `
     p-0 relative z-10 bg-black rounded-4xl 
-    h-full w-full`;
+    h-full w-full flex justify-center pt-2`;
 ---
+
 return (
-    <section class="py-10 px-4 flex justify-center">
-        <div class={mokClasses}>
-            <div class={innerClasses}>
+<section class="py-10 px-4 flex justify-center">
+    <div class={mokClasses}>
+        <div class={innerClasses}>
+            <div class="flex gap-4">
+                <div class="border border-violet-500/30 w-10 h-10 rounded-4xl"></div>
+                <div
+                    class="w-70 h-10 rounded-4xl border border-violet-500/30 flex justify-end items-center"
+                >
+                    <div
+                        class="w-10 h-10 m-4 p-1 flex justify-center flex-wrap items-center"
+                    >
+                        <div
+                            class="border border-indigo-500/30 w-full h-1 rounded-4xl"
+                        >
+                        </div>
+                        <div
+                            class="border border-indigo-500/30 w-full h-1 rounded-4xl"
+                        >
+                        </div>
+                        <div
+                            class="border border-indigo-500/30 w-full h-1 rounded-4xl"
+                        >
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+
 );

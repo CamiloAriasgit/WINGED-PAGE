@@ -8,17 +8,31 @@ const mokClasses = `
 
 const innerClasses = `
     p-0 relative z-10 bg-black rounded-4xl 
-    h-full w-full flex justify-center pt-2`;
+    h-full w-full flex content-start justify-center flex-wrap`;
+
+const gradienteClases = `
+    // Contenedor Exterior (el Borde Gradiente)
+    relative 
+    p-[1px] 
+    bg-gradient-to-b from-indigo-500/30 to-black 
+    rounded-4xl 
+    w-full h-30`; // Establece un tamaño base para el ejemplo
+
+const contenidoClases = `
+    bg-black  // Color que cubre el interior
+    rounded-4xl
+    h-full w-full`; // Asegura que cubra completamente el contenedor padre
 ---
 
 return (
 <section class="py-10 px-4 flex justify-center">
     <div class={mokClasses}>
         <div class={innerClasses}>
-            <div class="flex gap-4">
-                <div class="border border-violet-500/30 w-10 h-10 rounded-4xl"></div>
+            <div class="flex gap-4 h-15 border w-full justify-between p-2">
+                <div class="border border-violet-500/30 w-10 h-10 rounded-4xl">
+                </div>
                 <div
-                    class="w-70 h-10 rounded-4xl border border-violet-500/30 flex justify-end items-center"
+                    class="w-50 h-10 rounded-4xl border border-violet-500/30 flex justify-end items-center"
                 >
                     <div
                         class="w-10 h-10 m-4 p-1 flex justify-center flex-wrap items-center"
@@ -38,9 +52,32 @@ return (
                     </div>
                 </div>
             </div>
+            <div
+                class="border border-indigo-500/30 rounded-4xl h-20 w-full mx-2"
+            >
+            </div>
+            <div
+                class="border h-30 w-full mt-2 flex gap-2 px-2"
+            >
+                <div
+                    class={gradienteClases}
+                >
+                    <div
+                        class={contenidoClases}
+                    >
+                    </div>
+                </div>
+                <div
+                    class={gradienteClases}
+                >
+                    <div
+                        class={contenidoClases}
+                    >
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
-
 
 );

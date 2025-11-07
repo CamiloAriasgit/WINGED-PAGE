@@ -13,11 +13,11 @@ const whatsappUrl = `https://wa.me/${NUMERO_DE_TELEFONO}?text=${mensajeCodificad
 // Clase para el contenedor exterior (el "borde" degradado)
 const whatsappBorder = `
     relative inline-block rounded-4xl p-[1px]
-    bg-gradient-to-r from-[#c59dff] via-[#5424bb]/40 to-violet-500/10
+    bg-gradient-to-r from-[#c59dff] via-[#5424bb]/70 to-violet-500/20
     group
     shadow-2xl shadow-violet-700
-    hover:bg-gradient-to-r hover:from-[#c59dff] hover:via-[#5424bb]/40 hover:to-violet-500/20
-    hover:shadow-violet-800 transition-all duration-500
+    hover:bg-gradient-to-r hover:from-[#c59dff] hover:via-[#5424bb]/50 hover:to-violet-500/20 transition-all duration-500
+    hover:shadow-violet-900 transition-all duration-500
 `;
 
 const whatsappBorderr = `
@@ -36,7 +36,6 @@ const whatsappInner = `
     text-white font-semibold
     bg-gradient-to-r from-black via-black to-violet-500
     transition-all duration-300
-    /* Corrección de sintaxis del hover */
     hover:bg-gradient-to-r hover:from-black hover:via-black hover:to-violet-500
     flex items-center justify-center gap-7
 `;
@@ -47,7 +46,6 @@ const whatsappInnerr = `
     text-white font-semibold
     bg-gradient-to-r from-black via-black to-cyan-500
     transition-all duration-300
-    /* Corrección de sintaxis del hover */
     hover:bg-gradient-to-r hover:from-black hover:via-black hover:to-indigo-500
     flex items-center justify-center gap-7
 `;

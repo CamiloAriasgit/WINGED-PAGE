@@ -13,21 +13,21 @@ const whatsappUrl = `https://wa.me/${NUMERO_DE_TELEFONO}?text=${mensajeCodificad
 // Clase para el contenedor exterior (el "borde" degradado)
 const whatsappBorder = `
     relative inline-block rounded-4xl p-[1px]
-    bg-gradient-to-r from-blue-500 via-blue-500/30 to-blue-500/20
+    bg-gradient-to-r from-cyan-500 via-cyan-500/30 to-indigo-500/20
     group
-    shadow-2xl shadow-indigo-700
-    hover:bg-gradient-to-r hover:from-blue-500 hover:via-blue-500/50 hover:to-blue-500/20 transition-all duration-500
-    hover:shadow-blue-900 transition-all duration-500
+    shadow-2xl shadow-indigo-900
+    hover:bg-gradient-to-r hover:from-indigo-500 hover:via-indigo-500/50 hover:to-violet-500/20 transition-all duration-500
+    hover:shadow-indigo-800 transition-all duration-500
 `;
 
 const whatsappInner = `
     relative z-10
     rounded-4xl
     pl-4 pr-1 py-1 font-light tracking-widest
-    text-blue-400 font-semibold
-    bg-gradient-to-r from-black via-black to-blue-500
+    text-white font-semibold
+    bg-gradient-to-r from-black via-black to-[#0000ff]
     transition-all duration-300
-    hover:bg-gradient-to-r hover:from-black hover:via-black hover:to-blue-500
+    hover:bg-gradient-to-r hover:from-black hover:via-black hover:to-violet-500
     flex items-center justify-center gap-7
 `;
 
@@ -56,9 +56,9 @@ const whatsappInnerr = `
   href={whatsappUrl}
   target="_blank"
   rel="noopener noreferrer"
-  class={whatsappBorderr}
+  class={whatsappBorder}
 >
-  <div class={whatsappInnerr}>
+  <div class={whatsappInner}>
     {texto}
     <div class="bg-black rounded-4xl p-2 border border-neutral-500/80">
       <svg

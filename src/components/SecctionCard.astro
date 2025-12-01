@@ -2,43 +2,45 @@
 import CardFeat from "./CardFeat.astro";
 import CarruselCircularTailwind from "./CarruselCircularTailwind";
 const imageList = [
-    'public/images/1.jpg', // URL 1
-    'public/images/2.jpg', // URL 1
-    'public/images/3.jpg', // URL 1
-    'https://tse1.mm.bing.net/th/id/OIP.P1awi0UgrH0dpjHsCV3fbgHaEz?w=1400&h=909&rs=1&pid=ImgDetMain&o=7&rm=3', // URL 4
-    'https://tse3.mm.bing.net/th/id/OIP.cKrr_vcIPFQ9O1cv5BZ7TAHaDX?w=1351&h=615&rs=1&pid=ImgDetMain&o=7&rm=3', // URL 5 (puedes agregar más)
+    "public/images/1.jpg", // URL 1
+    "public/images/2.jpg", // URL 1
+    "public/images/3.jpg", // URL 1
+    "https://tse1.mm.bing.net/th/id/OIP.P1awi0UgrH0dpjHsCV3fbgHaEz?w=1400&h=909&rs=1&pid=ImgDetMain&o=7&rm=3", // URL 4
+    "https://tse3.mm.bing.net/th/id/OIP.cKrr_vcIPFQ9O1cv5BZ7TAHaDX?w=1351&h=615&rs=1&pid=ImgDetMain&o=7&rm=3", // URL 5 (puedes agregar más)
 ];
 ---
 
-<section class="font-sans min-h-[calc(100vh-1px)] bg-gradient-to-b from-[#5424bb]/0 via-[#5424bb]/0 to-black">
+<section
+    class="font-sans min-h-[calc(100vh-1px)] bg-gradient-to-b from-[#5424bb]/0 via-[#5424bb]/0 to-black"
+>
     <div class="container mx-auto px-2 text-center">
+        <h1
+            class="text-3xl tracking-tight font-semibold text-balance text-[#f8f8ff] sm:text-3xl"
+        >
+            Working...
+        </h1>
+        <CarruselCircularTailwind imageUrls={imageList} client:load />
 
-        <h1 class="text-3xl tracking-tight font-semibold text-balance text-[#f8f8ff] sm:text-3xl ">Working...</h1>
-        <CarruselCircularTailwind imageUrls={imageList} client:load/>
-
-
-        <div class="mt-10 grid gap-4 lg:grid-cols-2 lg:grid-rows-2 text-start">
-            <div class="relative lg:row-span-2">
-                <CardFeat
-                    title="Cierre de Fugas de Ventas."
-                    description="Su web actual pierde el 98% del tráfico pagado. Una Landing Page multiplica su conversión por más de 7 veces."
-                    icon="https://assets.entrepreneur.com/content/3x2/2000/1701107803-latin-america-business-expansion-1123-g1171615860.jpg"
-                    size="large"
-                />
-            </div>
+        <div class="mt-10 grid gap-4 lg:grid-cols-3 lg:grid-rows-1 text-start">
             <CardFeat
-                title="Venta Directa en 5 Segundos."
-                description="Garantizamos que su cliente entiende el valor al instante. Cero distracciones. Si no es claro, la venta no existe."
+                title="Alan Brito"
+                companie="CEO Marketing InterWorld"
+                description="El servicio es excelente y muy profesional, si quieres una landinPage de vanguardia y veloz, esto realmente es para ti. El resultado fue fantástico, y lo mejor: SIN ANTICIPO."
+                icon="https://assets.entrepreneur.com/content/3x2/2000/1701107803-latin-america-business-expansion-1123-g1171615860.jpg"
+            />
+            <CardFeat
+                title="International Atlantic Airlines"
+                companie="Empresa de Transporte Aereo"
+                description="No solo cumplió con las expectativas, sino que superó las expectativas del equipo. Pedimos una Landing y nos entregaron una máquina de ventas."
                 icon="https://www.valenzhealth.com/wp-content/uploads/2020/10/Professional-800x800-L.png"
             />
             <CardFeat
-                title="Su Activo de ROI Optimizable."
-                description="Esto no es solo diseño, es un laboratorio de ventas. Medimos y ajustamos para que su inversión publicitaria nunca se queme."
+                title="Aurora Lennor"
+                companie="President Of Stores For Sales"
+                description="Sin palabras..."
                 icon="https://www.greanpipe.com/wp-content/uploads/2019/11/dealer-768x707.png"
             />
-
         </div>
-
     </div>
 </section>
 
@@ -46,12 +48,12 @@ const imageList = [
     /* Variables CSS para responsividad 3D */
     :root {
         /* Los valores de radio Z sirven ahora para la inmersión */
-        --carrusel-radio-z: 150px; 
+        --carrusel-radio-z: 150px;
         --carrusel-perspective: 900px;
     }
 
     /* Aplica los estilos para Escritorio (sm: breakpoint) */
-    @media (min-width: 640px) { 
+    @media (min-width: 640px) {
         :root {
             --carrusel-radio-z: 250px; /* Radio grande */
             --carrusel-perspective: 1200px;

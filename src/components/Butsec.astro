@@ -13,10 +13,10 @@ const whatsappUrl = `https://wa.me/${NUMERO_DE_TELEFONO}?text=${mensajeCodificad
 // Clase para el contenedor exterior (el "borde" degradado)
 const whatsappBorder = `
     relative inline-block rounded-4xl p-[1px]
-    bg-gradient-to-r from-violet-500 via-cyan-500/30 to-indigo-500/20
+    bg-gradient-to-r from-violet-500 via-indigo-500/30 to-cyan-500/20
     group
     shadow-2xl shadow-indigo-900
-    hover:bg-gradient-to-r hover:from-indigo-500 hover:via-cyan-500/50 hover:to-indigo-500/20 transition-all duration-500
+    hover:bg-gradient-to-r hover:from-violet-500 hover:via-cyan-500/50 hover:to-indigo-500/20 transition-all duration-500
     hover:shadow-indigo-800 transition-all duration-500
 `;
 
@@ -25,7 +25,7 @@ const whatsappInner = `
     rounded-4xl
     pl-4 pr-1 py-1 font-light tracking-widest
     text-white font-semibold
-    bg-gradient-to-r from-black via-black to-indigo-500
+    bg-gradient-to-r from-black via-black to-indigo-500/70
     transition-all duration-300
     hover:bg-gradient-to-r hover:from-black hover:via-black hover:to-indigo-500
     flex items-center justify-center gap-7

@@ -1,27 +1,37 @@
 ---
 import Butsec from "./Butsec.astro";
+import MinimalButton from "./MinimalButton.astro";
+
+const titleStyle = `
+    font- text-center text-4xl tracking-tight sm:text-5xl 
+    absolute bottom-0 left-0 right-0 p-4
+`;
+const spanStyle = `
+    text bg-clip-text text-transparent bg-gradient-to-r 
+    from-neutral-100 via-neutral-100 to-neutral-100
+`;
+const spanStyle2 = `
+    text bg-clip-text text-transparent bg-gradient-to-r 
+    from-neutral-100 via-neutral-100 to-neutral-100
+`;
 ---
 
 <section
-    class="bg-black border-2 min-h-screen flex flex-col items-center justify-start pt-15"
+    class="min-h-screen flex flex-col items-center justify-start pt-25"
 >
-    <div class="sm:w-2xl relative"> 
-        <img src="https://www.theminimalists.com/wp-content/uploads/2019/09/ash-edmonds-qjIJqoO7kvI-unsplash-2-1024x682.jpg" alt="Imagen de fondo para el proyecto" class="block w-full h-auto" />
+    <div class="sm:w-xl relative"> 
+        <img src="https://dansilvestre.com/wp-content/uploads/2021/08/writing-lessons.jpeg" class="block w-full h-auto" />
         
         <h1 
-            class="
-                font text-center text-4xl tracking-tight text-neutral-200 sm:text-5xl 
-                absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-50
-            "
+            class={titleStyle}
         >
-            Frontend <span class="text-neutral-200">Developer</span>
-        </h1>
+            <span class={spanStyle}>Frontend</span> <span class={spanStyle2}>Developer</span>
+        </h1>
     </div>
-          <p class="text-neutral-400 mt-4 px-4 sm:w-2xl text-center"> 
+          <p class="text-neutral-400 mt-4 px-4 sm:w-2xl text-center font-light"> 
             Desarrollo profesional de sitios web estáticos optimizados para vender.
      </p>
     <div class="mt-8">
-        <Butsec texto="COMENZAR AHORA" />
+        <MinimalButton texto="EMPEZAR AHORA"/>
     </div>
-   
-</section>
+    

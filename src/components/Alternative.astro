@@ -1,44 +1,69 @@
 ---
-import Butsec from "../components/Butsec.astro";
+const recuadro = `
+    lg:w-1/2 p-6 rounded-xl bg-neutral-900/70 border border-neutral-950
+`;
+const tituloRecuadro = `
+    text-2xl font-semibold text-neutral-400 mb-4
+`;
+const spanRecuadro = `
+    bg-clip-text text-transparent bg-gradient-to-r
+    from-purple-500 via-indigo-500 to-emerald-500 mr-3 mt-1
+`;
 ---
 
-<div class="bg-neutral-950 min-h-screen relative overflow-hidden">
+<section class="min-h-screen text-white font-sans antialiased">
+
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <h2 class="text-3xl sm:text-4xl text-center mb-12">Nuestra Propuesta de Valor</h2>
     
-    <div class="relative isolate px-6 pt-14 lg:px-8">
-        
-        <div aria-hidden="true" class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
-            <div 
-                style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" 
-                class="relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-violet-500 to-cyan-400 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-            ></div>
-        </div>
-
-        <section
-            class="flex items-center min-h-[calc(100vh-1px)] mx-0"
-        >
-            <div class="container mx-auto text-center py-32 sm:py-48 lg:py-56">
-                <h1
-                    class="text-3xl tracking-tight font- text-balance text-[#f8f8ff] sm:text-5xl"
-                >
-                    Tu próxima venta <span
-                        class="bg-clip-text text-transparent
-                            bg-gradient-to-r from-[#f8f8ff] to-[#c59dff]"
-                        ><br />comienza aquí</span>
-                </h1><br />
-                <p class="text-[#f8f8ff]/70 font-light sm:text-xl">
-                    Convierte clicks en <span class="text-[#c59dff]">clientes</span>
-                </p><br /><br />
-                <div class="">
-                    <Butsec texto="EMPEZAR" />
-                </div>
+    <div class="flex flex-col lg:flex-row gap-8">
+      
+      <div class={recuadro}>
+        <h3 class={tituloRecuadro}>Frontend Estratégico</h3>
+        <ul class="space-y-4 text-slate-300">
+          <li class="flex items-start">
+            <span class={spanRecuadro}>✓</span>
+            <div>
+              <strong class="text-white">Astro.build:</strong> Arquitectura de Isla para un rendimiento insuperable. Tu web carga *antes* de que piensen en hacer clic en otro lugar.
             </div>
-        </section>
+          </li>
+          <li class="flex items-start">
+            <span class={spanRecuadro}>✓</span>
+            <div>
+              <strong class="text-white">React/Vue Islands:</strong> Usamos componentes interactivos solo donde se necesitan. Potencia sin sacrificar velocidad.
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class={spanRecuadro}>✓</span>
+            <div>
+              <strong class="text-white">Diseño Responsivo:</strong> Experiencia impecable en móvil, donde ocurre el 80% de las conversiones.
+            </div>
+          </li>
+        </ul>
+      </div>
 
-        <div aria-hidden="true" class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
-            <div 
-                style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" 
-                class="relative left-[calc(50%+3rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 bg-linear-to-tr from-violet-500 to-cyan-400 opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-            ></div>
-        </div>
+      <div class={recuadro}>
+        <h3 class={tituloRecuadro}>Diseño y Conversión</h3>
+        <ul class="space-y-4 text-slate-300">
+          <li class="flex items-start">
+            <span class={spanRecuadro}>1.</span>
+            <div>
+              <strong class="text-white">Claridad en el 'Hero':</strong> Mensaje que resuelve la necesidad del cliente en 3 segundos.
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class={spanRecuadro}>2.</span>
+            <div>
+              <strong class="text-white">Prueba Social:</strong> Integración de testimonios o casos de éxito (Placeholder: listo para pegar los tuyos).
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class={spanRecuadro}>3.</span>
+            <div>
+              <strong class="text-white">CTA Recurrente:</strong> Botones de WhatsApp estratégicos, con el *pitch* correcto en el momento exacto.
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
-</div>
+  </section>

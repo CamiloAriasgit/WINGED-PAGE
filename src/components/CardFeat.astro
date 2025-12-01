@@ -1,22 +1,26 @@
 ---
 interface props {
     title: string;
+    companie: string;
     description: string;
     size?: "small" | "large";
 }
 
 const { title } = Astro.props;
+const { companie } = Astro.props;
 const { description } = Astro.props;
 const { size } = Astro.props;
 const cardClasses = `
     relative rounded-4xl overflow-hidden p-[1px] 
     ${size === "large" ? "lg:col-span-2 lg:row-span-2" : ""}
-    bg-gradient-to-br from-[#c59dff]/0 via-[#5424bb]/100 to-black 
+    bg-gradient-to-br from-neutral-800 via-neutral-100/0 to-neutral-500 
     text-white transition-colors duration-300`;
 ---
 
 <div class={cardClasses}>
-    <div class="p-8 relative z-10 bg-black rounded-4xl h-full"> 
-        <h3 class={`text-xl font-normal text-[#f8f8ff]`}>{title}</h3> <p class="mt-2 text-neutral-600 text-sm">{description}</p>
+    <div class="p-8 relative z-10 bg-neutral-950 rounded-4xl h-full"> 
+        <h3 class={`text-xl font-normal text-[#f8f8ff]`}>{title}</h3>
+        <p class="mt-2 text-neutral-700 text-sm">{companie}</p><br>
+        <p class="mt-2 text-neutral-500 text-sm">{description}</p>
     </div>
 </div>

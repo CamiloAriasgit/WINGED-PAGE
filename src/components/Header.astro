@@ -1,20 +1,66 @@
 ---
 import TelButton from "./TelButton.astro";
+
+const linkStyle = `
+    hover:text-white font-light transition-colors duration-200
+`;
 ---
 
 <header class="backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
-    <nav class="container mx-auto px-6 py-4 flex justify-between items-center" role="navigation" aria-label="Navegación Principal">
-        
-        <a 
-            href="/" 
+    <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+        role="navigation"
+        aria-label="Navegación Principal"
+    >
+        <a
+            href="/"
             class="bg-clip-text text-transparent bg-gradient-to-r from-[#f8f8ff]/70 to-[#f8f8ff]/70 relative group hover:cursor-pointer font-bold"
         >
-            WEB STUDIO
-            <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-black via-indigo-500 to-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
+            WEB STUDIO             <span
+                class="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-purple-500 via-indigo-500 to-cyan-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"
+            ></span>
         </a>
 
-        <div>
-            <TelButton/>
+        <div class="flex gap-40">
+            <div
+                class="hidden sm:flex space-x-8 items-center justify-center text-white/70"
+            >
+                <ul class="flex space-x-6">
+                    <li>
+                        <a
+                            href="#servicios"
+                            class={linkStyle}
+                        >
+                            Servicios
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#portafolio"
+                            class={linkStyle}
+                        >
+                            Portafolio
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#clientes"
+                            class={linkStyle}
+                        >
+                            Clientes
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#contacto"
+                            class={linkStyle}
+                        >
+                            Contacto
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <TelButton />
         </div>
     </nav>
 </header>

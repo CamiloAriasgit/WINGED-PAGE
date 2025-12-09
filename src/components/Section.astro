@@ -1,28 +1,48 @@
 ---
-import Button from "../components/Button.astro";
-import Mockup from "./Mockup.astro";
+import MinimalButton from "./MinimalButton.astro";
+
+import BlackFace from '../assets/images/BlackFace.jpg';
+import { Image } from "astro:assets";
+const titleStyle = `
+    font- text-center text-4xl tracking-tight sm:text-5xl 
+    absolute bottom-0 left-0 right-0 p-4
+`;
+const spanStyle = `
+    text bg-clip-text text-transparent bg-gradient-to-r 
+    from-neutral-500 via-neutral-400 to-neutral-200
+`;
+const spanStyle2 = `
+    text bg-clip-text text-transparent bg-gradient-to-r 
+    from-neutral-200 via-neutral-400 to-neutral-500
+`;
+const spanAstro = `
+    text bg-clip-text font-bold text-transparent bg-gradient-to-r 
+    from-purple-500 via-indigo-500 to-cyan-500
+`;
 ---
 
 <section
-  class="flex items-center min-h-[calc(100vh-1px)] mx-0 bg-gradient-to-b from-[#5424bb]/0 via-black to-[#5424bb]/0"
+    class="min-h-screen flex flex-col items-center justify-start pt-25"
 >
-  <div class="container mx-auto text-center">
-    <h1
-      class="text-3xl tracking-tight font- text-balance text-[#f8f8ff] sm:text-5xl"
-    >
-      Tu próxima venta <span
-        class="bg-clip-text text-transparent
-           bg-gradient-to-r from-[#f8f8ff] to-[#c59dff]"
-        ><br />comienza aquí</span>
-    </h1><br />
-    <p class="text-[#f8f8ff]/70 font-light sm:text-xl">
-      Convierte clicks en <span class="text-[#c59dff]">clientes</span>
-    </p><br /><br />
-    <div class="">
-      <Button texto="EMPEZAR" />
+    <div class="sm:w-xl relative"> 
+        <Image 
+          src={BlackFace} 
+          width={1200}     
+          height={800}  
+          alt="Descripción de la imagen"
+          class="block w-full h-auto" 
+        />
+        
+        <h1 
+            class={titleStyle}
+        >
+            <span class={spanStyle}>Frontend</span> <span class={spanStyle2}>Developer</span>
+        </h1>
+    </div>
+          <p class="text-neutral-300 mt-1 px-4 sm:w-2xl text-center font-light"> 
+            Desarrollado con <span class={spanAstro}>Astro</span>, el framework más veloz del mercado.
+     </p>
+    <div class="mt-8">
+        <MinimalButton texto="C O N T A C T A R"/>
     </div>
-    <div class="mt-15 ">
-      <img src="public/images/HeroImagen.png" alt="" class="w-full lg:max-w-xl xl:max-w-xl mx-auto">
-    </div>
-  </div>
 </section>

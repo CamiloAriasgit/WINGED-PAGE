@@ -6,7 +6,7 @@ interface Props {
 const { texto } = Astro.props;
 const NUMERO_DE_TELEFONO = "573003607632";
 const MENSAJE_PREDETERMINADO =
-  "¡Hey, quiero convertir visitantes en *clientes* con una landing page!";
+  "¡Hey, quiero convertir visitantes en clientes con una landing page!";
 const mensajeCodificado = encodeURIComponent(MENSAJE_PREDETERMINADO);
 const whatsappUrl = `https://wa.me/${NUMERO_DE_TELEFONO}?text=${mensajeCodificado}`;
 
